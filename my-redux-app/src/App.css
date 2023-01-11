@@ -37,3 +37,16 @@
     transform: translateY(0px);
   }
 }
+
+body {
+  background: #141414;
+  color: #ffffff;
+  margin: 5rem;
+}
+
+.movie-app > .row {
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
