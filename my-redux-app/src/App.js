@@ -3,7 +3,7 @@ import './App.css';
 import {useEffect, useState} from 'react';
 import './globals/globalVariables';
 import { posterPath } from './globals/globalVariables';
-import './styles/styles.scss';
+import './scss/styles.scss';
 
 function App() {
   const [moviesData, setMoviesData] = useState('');
