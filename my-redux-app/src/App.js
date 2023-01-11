@@ -3,7 +3,7 @@ import './App.css';
 import {useEffect, useState} from 'react';
 import './globals/globalVariables';
 import { posterPath } from './globals/globalVariables';
-import './styles/styles.scss';
+import './scss/styles.scss';
 
 function App() {
   const [moviesData, setMoviesData] = useState('');
@@ -22,13 +22,12 @@ function App() {
   return (
     <div className="App">
       {moviesData === '' ? (
-        '<h1>Fetching todos...</h1>'
+        '<h1>Fetching movies...</h1>'
        ) : (
          <ul>
            {moviesData.map(item => (
               <>
-              <img key={item.id} src={posterPath+item.poster_path}></img>
-              <li key={item.id}>{item.title}</li>
+              <li key={item.id}><img src={posterPath+item.poster_path} alt={""}></img>{item.title}</li>
              </>
            ))}
         </ul>
