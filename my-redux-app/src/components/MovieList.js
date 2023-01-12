@@ -5,7 +5,7 @@ import { posterPath } from "../globals/globalVariables";
 const MovieList = (props) => {
   return (
     <>
-      {props.movies.map((movie, index) => (
+      {props.movies.map((movie) => (
         <div className="image-container d-flex justify-content-start m-3">
           <img src={posterPath + movie.poster_path} alt="movie"></img>
         </div>
