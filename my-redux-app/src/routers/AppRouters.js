@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../App.css";
-// import Nav from "../components/Nav";
+import Nav from "../components/Nav";
 // import Footer from "../components/Footer";
 import Home from "../pages/Home";
 import About from "../pages/About";
@@ -12,7 +12,7 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <div className="nav-wrapper">
-        {/* <Nav /> */}
+        <Nav />
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
