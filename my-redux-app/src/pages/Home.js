@@ -20,7 +20,9 @@ function Home() {
 
   return (
     <div className="container-fluid movie-app">
-      <div className="row">{/* <MovieList movies={moviesData} /> */}</div>
+      <div className="row">
+        <MovieList movies={moviesData} />
+      </div>
     </div>
   );
 }
