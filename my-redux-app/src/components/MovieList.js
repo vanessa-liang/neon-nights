@@ -7,10 +7,10 @@ const MovieList = (props) => {
   return (
     <>
       {props.movies.map((movie) => (
-        <div className="image-container d-flex justify-content-start m-3">
-          <NavLink to="/single">
-            <img src={posterPath + movie.poster_path} alt="movie"></img>
-          </NavLink>
+        <div key={movie.id} className="image-container d-flex justify-content-start m-3">
+          {/* <NavLink to="/single"> */}
+          <img src={posterPath + movie.poster_path} alt="movie"></img>
+          {/* </NavLink> */}
         </div>
       ))}
     </>

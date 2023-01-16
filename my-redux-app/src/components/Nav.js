@@ -5,17 +5,17 @@ const Nav = () => {
     e.target.blur();
   }
   return (
-    <nav className="main-na" onClick={handleBlurOnClick}>
+    <nav className="main-nav" onClick={handleBlurOnClick}>
       <nav className="main-nav" onClick={handleBlurOnClick}></nav>
       <ul>
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="">Manage User</NavLink>
+          <NavLink to="/favourite">Favourites</NavLink>
         </li>
         <li>
-          <NavLink to="">Contact</NavLink>
+          <NavLink to="/about">About</NavLink>
         </li>
       </ul>
     </nav>
