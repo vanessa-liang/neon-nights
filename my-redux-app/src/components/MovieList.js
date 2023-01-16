@@ -8,9 +8,9 @@ const MovieList = (props) => {
     <>
       {props.movies.map((movie) => (
         <div className="image-container d-flex justify-content-start m-3">
-          <NavLink to="/single">
-            <img src={posterPath + movie.poster_path} alt="movie"></img>
-          </NavLink>
+          {/* <NavLink to="/single"> */}
+          <img src={posterPath + movie.poster_path} alt="movie"></img>
+          {/* </NavLink> */}
         </div>
       ))}
     </>
