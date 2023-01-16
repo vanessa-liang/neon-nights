@@ -11,7 +11,7 @@ function Home() {
   const fetchData = async () => {
     const results = await fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=5d25ff38c62c8743cafcfe4221c1f5ae&language=en-US&page=1");
     const jsonData = await results.json();
-    setMoviesData(jsonData.results);
+    setMoviesData(jsonData.results.slice(0, 12));
   };
 
   useEffect(() => {
