@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import { App } from "../pages/Home";
+import Home from "../pages/Home";
 import PageAbout from "../pages/About";
 import PageSingle from "../pages/Single";
 import PageFavourite from "../pages/Favourites";
@@ -11,9 +11,9 @@ function AppRouter() {
   return (
     <BrowserRouter>
       <div className="nav-wrapper">
-        <Nav />
+        {/* <Nav /> */}
         <Routes>
-          <Route path="/" exact element={<App />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<PageAbout />} />
           <Route path="/favourite" element={<PageFavourite />} />
           <Route path="/single" element={<PageSingle />} />

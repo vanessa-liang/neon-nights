@@ -5,7 +5,7 @@ import "../globals/globalVariables";
 import "../scss/styles.scss";
 import MovieList from "../components/MovieList";
 
-function App() {
+function Home() {
   const [moviesData, setMoviesData] = useState([]);
 
   const fetchData = async () => {
@@ -20,11 +20,9 @@ function App() {
 
   return (
     <div className="container-fluid movie-app">
-      <div className="row">
-        <MovieList movies={moviesData} />
-      </div>
+      <div className="row">{/* <MovieList movies={moviesData} /> */}</div>
     </div>
   );
 }
 
-export default App;
+export default Home;
