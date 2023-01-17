@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import "../globals/globalVariables";
 import "../scss/styles.scss";
 import MovieList from "../components/MovieList";
-import Filters from "../components/Drop-down";
 
 function Home() {
   const [moviesData, setMoviesData] = useState([]);
+  const [movieFilter, setMovieFilter] = useState("now_playing");
 
   let fetchData = async () => {
-    let movieFilter = Filters.state.value;
+    // let movieFilter = Filters.state.value;
     let results = await fetch(`https://api.themoviedb.org/3/movie/${movieFilter}?api_key=5d25ff38c62c8743cafcfe4221c1f5ae&language=en-US&page=1`);
     const jsonData = await results.json();
     setMoviesData(jsonData.results.slice(0, 12));
@@ -18,11 +18,22 @@ function Home() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [movieFilter]);
+
+  function handleChange(event) {
+    const newFilter = event.target.value;
+    console.log(newFilter);
+    setMovieFilter(newFilter);
+  }
 
   return (
     <div className="container-fluid movie-app">
-      <Filters />
+      <select onChange={handleChange}>
+        <option value="now_playing">Now Playing</option>
+        <option value="popular">Popular</option>
+        <option value="top_rated">Top Rated</option>
+        <option value="upcoming">Upcoming</option>
+      </select>
       <div className="row">
         <MovieList movies={moviesData} />
       </div>

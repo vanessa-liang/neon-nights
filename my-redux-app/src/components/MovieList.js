@@ -1,7 +1,6 @@
 import React from "react";
 import "../globals/globalVariables";
 import { posterPath } from "../globals/globalVariables";
-import { NavLink } from "react-router-dom";
 
 const MovieList = (props) => {
   return (
