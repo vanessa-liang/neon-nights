@@ -7,6 +7,7 @@ import About from "../pages/About";
 import Single from "../pages/Single";
 import Favourites from "../pages/Favourites";
 import PageNotFound from "../pages/Page-not-found";
+import '../scss/styles.scss';
 
 function AppRouter() {
   return (
@@ -20,8 +21,9 @@ function AppRouter() {
           <Route path="/single" element={<Single />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }
