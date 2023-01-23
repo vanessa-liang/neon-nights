@@ -1,0 +1,17 @@
+@import 'vars';
+
+about-title {
+   display: flex; 
+   justify-content: center;
+}
+
+about-content {
+    display: flex; 
+   justify-content: center;
+}
+
+about-title,
+about-content {
+    background-color: $accent;
+    border-radius: 25px;
+}
