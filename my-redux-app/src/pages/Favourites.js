@@ -2,9 +2,9 @@ import React from "react";
 
 function Favourites() {
   return (
-    <div>
-      <div>hi</div>
-    </div>
+    <header>
+      <h1>Favourites</h1>
+    </header>
   );
 }
 
