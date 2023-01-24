@@ -1,17 +1,20 @@
 @import 'vars';
 
-about-title {
+.about-title {
    display: flex; 
    justify-content: center;
 }
 
-about-content {
+.about-content {
     display: flex; 
-   justify-content: center;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 3rem;
 }
 
-about-title,
-about-content {
+.about-title,
+.about-content {
     background-color: $accent;
     border-radius: 25px;
+    margin: 4rem;
 }
