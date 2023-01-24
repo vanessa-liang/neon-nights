@@ -43,6 +43,10 @@ const Single = () => {
       <div>
         <p>Released {movie.release_date}</p>
       </div>
+
+      <div>
+        <img src={posterPath + movie.backdrop_path} alt={movie.title}></img>
+      </div>
     </div>
   );
 };
