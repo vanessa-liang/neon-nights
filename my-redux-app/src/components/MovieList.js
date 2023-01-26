@@ -1,5 +1,6 @@
 import React from "react";
 import "../globals/globalVariables";
+import { Link } from "react-router-dom";
 import { posterPath } from "../globals/globalVariables";
 // import FavBtn from "./FavBtn";
 
@@ -24,24 +25,12 @@ const MovieList = (props, movieObj, isFav) => {
     <>
       {props.movies.map((movie) => (
         <div key={movie.id} className="image-container d-flex justify-content-start m-3">
-          {/* <NavLink to="/single"> */}
           <div className="movie-fav">
-            {/* <FavBtn /> */}
-            { isFav ? (
-          <FavBtn
-          movieObj={movie.id}
-          remove={true}
-          handleFavClick={handleFavClick}
-          />
-        ) : (
-          <FavBtn 
-          movieObj={movie.id}
-          handleFavClick={handleFavClick}
-        />
-        )}
-            <img src={posterPath + movie.poster_path} alt="movie"></img>
+            <FavBtn />
+            <Link key={movie.id} to={`/Single/${movie.id}`}>
+              <img src={posterPath + movie.poster_path} alt="movie"></img>
+            </Link>
           </div>
-          {/* </NavLink> */}
         </div>
       ))}
     </>
