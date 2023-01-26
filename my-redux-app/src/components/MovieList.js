@@ -9,8 +9,8 @@ const MovieList = (props) => {
     <>
       {props.movies.map((movie) => (
         <div key={movie.id} className="image-container d-flex justify-content-start m-3">
+          <FavBtn />
           <Link key={movie.id} to={`/Single/${movie.id}`}>
-            <FavBtn />
             <img src={posterPath + movie.poster_path} alt="movie"></img>
           </Link>
         </div>
