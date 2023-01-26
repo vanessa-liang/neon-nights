@@ -1,0 +1,14 @@
+.movie-fav {
+    position: relative;
+
+    .fav {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+
+        .heart {
+            width: 2.5rem;
+            height: auto;
+        }
+    }
+}
