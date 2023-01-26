@@ -1,17 +1,24 @@
-import {useState} from 'react';
+// import {useState} from 'react';
 
-const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
+// const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
 
-function FavBtn ({remove, handleFavClick}) {
-    const [btnState, setBtnState] = useState(false);
+function FavBtn ({movieObj, remove, handleFavClick}) {
+    // const [btnState, setBtnState] = useState(false);
 
-    function handleFavBtn() {
-        setBtnState(btnState => !btnState);
+    // function handleFavBtn() {
+    //     setBtnState(btnState => !btnState);
+    // }
+    function handleAddFav() {
+        handleFavClick(true, movieObj);
+    }
+
+    function handleRemoveFav() {
+        handleFavClick(false, movieObj);
     }
 
     return (
         <>
-        {btnState === false ? (
+        {/* {btnState === false ? (
             <button onClick={handleFavBtn} className="fav">
                 <img className='heart' src={`${imageFolderPath}neonheartunclicked.png`} alt="Unclicked heart"></img>
             </button>
@@ -19,6 +26,11 @@ function FavBtn ({remove, handleFavClick}) {
             <button onClick={handleFavBtn} className="fav">
                 <img className='heart' src={`${imageFolderPath}neonheartclicked.png`} alt="Clicked heart"></img>
             </button>
+        )} */}
+        {remove === false ? (
+            <button onClick={handleAddFav}>Add to Favs</button>
+        ) : (
+            <button onClick={handleRemoveFav}>Remove From Favs</button>
         )}
         </>
     );
@@ -29,3 +41,4 @@ FavBtn.defaultProps = {
 };
 
 export default FavBtn;
+
