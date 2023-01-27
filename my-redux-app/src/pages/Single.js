@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { posterPath } from "../globals/globalVariables";
+import { apiPath, posterPath, apiKey } from "../globals/globalVariables";
 
 const Single = () => {
   const [movie, setMovie] = useState([]);
@@ -10,7 +10,7 @@ const Single = () => {
   let { id } = useParams();
 
   let fetchMovie = async () => {
-    let results = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=5d25ff38c62c8743cafcfe4221c1f5ae&language=en-US`);
+    let results = await fetch(`${apiPath}${id}?${apiKey}&language=en-US`);
     const jsonData = await results.json();
     console.log(jsonData);
     setMovie(jsonData);

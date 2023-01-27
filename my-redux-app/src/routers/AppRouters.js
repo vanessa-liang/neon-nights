@@ -5,9 +5,10 @@ import Footer from "../components/Footer";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Single from "../pages/Single";
+import Result from "../pages/Result";
 import Favourites from "../pages/Favourites";
 import PageNotFound from "../pages/Page-not-found";
-import '../scss/styles.scss';
+import "../scss/styles.scss";
 
 function AppRouter() {
   return (
@@ -19,6 +20,7 @@ function AppRouter() {
           <Route path="/about" element={<About />} />
           <Route path="/favourite" element={<Favourites />} />
           <Route path="/single/:id" element={<Single />} />
+          <Route path="/result/:id" element={<Result />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         {/* <Footer /> */}
