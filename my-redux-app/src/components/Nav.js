@@ -9,17 +9,30 @@ const Nav = () => {
   return (
     <nav className="main-nav" onClick={handleBlurOnClick}>
       <nav className="main-nav" onClick={handleBlurOnClick}></nav>
-      <img src={`${imageFolderPath}neon-nights.png`} alt="Neon Nights logo"></img>
+
       <ul className="nav-links">
-        <li>
+        <NavLink to="/">
+          <img
+            src={`${imageFolderPath}neon-nights.png`}
+            alt="Neon Nights logo"
+          ></img>
+        </NavLink>
+
+        <li class="home" hidden>
           <NavLink to="/">Home</NavLink>
         </li>
-        <li>
+        <li class="fav" hidden>
           <NavLink to="/favourite">Favourites</NavLink>
         </li>
-        <li>
+        <li class="about" hidden>
           <NavLink to="/about">About</NavLink>
         </li>
+        <img
+          class="navsearch"
+          src={`${imageFolderPath}headersearch.svg`}
+          alt="header search"
+          hidden
+        ></img>
       </ul>
     </nav>
   );
