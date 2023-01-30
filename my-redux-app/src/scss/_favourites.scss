@@ -1,0 +1,30 @@
+@use 'vars' as *;
+
+main {
+    padding: 2rem;
+}
+
+.favourites-page {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.fav-pg-nofav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-weight: 600;
+    font-size: 2rem;
+    color: $accent;
+    justify-content: space-between;
+
+    p {
+        max-width: 50%;
+    }
+}
+
+header {
+    color: $accent;
+    padding: 1rem;
+}

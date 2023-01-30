@@ -2,6 +2,10 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { apiPath, posterPath, apiKey } from "../globals/globalVariables";
+import FavBtn from "../components/FavBtn";
+import { addMovie, deleteMovie } from "../features/slices/favsSlice";
+import { useDispatch } from "react-redux";
+import "../scss/styles.scss";
 
 const Single = () => {
   const [movie, setMovie] = useState([]);
@@ -21,6 +25,16 @@ const Single = () => {
     fetchMovie();
   }, [id]);
 
+  const dispatch = useDispatch();
+
+  function handleAddMov(mov) {
+    dispatch(addMovie(mov));
+  }
+
+  function handleDeleteMov(mov) {
+    dispatch(deleteMovie(mov));
+  }
+
   return (
     <div>
       <h1>{movie.title}</h1>
@@ -32,7 +46,9 @@ const Single = () => {
         <div className="rating">
           <p>{rating}%</p>
         </div>
-        <button>add to favourites</button>
+        <div className="single-pg-fav">
+          <FavBtn handleAddMov={handleAddMov} handleDeleteMov={handleDeleteMov} mov={movie} />
+        </div>
       </div>
 
       <div>
