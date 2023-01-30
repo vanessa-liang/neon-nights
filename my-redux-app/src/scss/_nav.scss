@@ -1,0 +1,29 @@
+Nav {
+    background-color: #392b3b;
+    padding: .5rem;
+
+    img {
+        height: 6rem;
+        position: absolute;
+        top: .5rem;
+        padding-left: 1rem;
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    justify-content: center;
+    position: relative;
+
+    li {
+        list-style: none;
+        
+        a {
+            text-decoration: none;
+            color: #d7afca;
+        }
+    }
+}

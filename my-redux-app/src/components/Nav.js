@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 
+const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
+
 const Nav = () => {
   function handleBlurOnClick(e) {
     e.target.blur();
@@ -7,7 +9,8 @@ const Nav = () => {
   return (
     <nav className="main-nav" onClick={handleBlurOnClick}>
       <nav className="main-nav" onClick={handleBlurOnClick}></nav>
-      <ul>
+      <img src={`${imageFolderPath}neon-nights.png`} alt="Neon Nights logo"></img>
+      <ul className="nav-links">
         <li>
           <NavLink to="/">Home</NavLink>
         </li>

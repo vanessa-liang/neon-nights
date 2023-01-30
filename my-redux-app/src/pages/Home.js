@@ -7,19 +7,33 @@ import MovieList from "../components/MovieList";
 
 function Home() {
   const [moviesData, setMoviesData] = useState([]);
+  const [movieFilter, setMovieFilter] = useState("now_playing");
 
-  const fetchData = async () => {
-    const results = await fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=5d25ff38c62c8743cafcfe4221c1f5ae&language=en-US&page=1");
+  let fetchData = async () => {
+    // let movieFilter = Filters.state.value;
+    let results = await fetch(`https://api.themoviedb.org/3/movie/${movieFilter}?api_key=5d25ff38c62c8743cafcfe4221c1f5ae&language=en-US&page=1`);
     const jsonData = await results.json();
-    setMoviesData(jsonData.results);
+    setMoviesData(jsonData.results.slice(0, 12));
   };
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [movieFilter]);
+
+  function handleChange(event) {
+    const newFilter = event.target.value;
+    console.log(newFilter);
+    setMovieFilter(newFilter);
+  }
 
   return (
     <div className="container-fluid movie-app">
+      <select onChange={handleChange}>
+        <option value="now_playing">Now Playing</option>
+        <option value="popular">Popular</option>
+        <option value="top_rated">Top Rated</option>
+        <option value="upcoming">Upcoming</option>
+      </select>
       <div className="row">
         <MovieList movies={moviesData} />
       </div>
