@@ -3,23 +3,15 @@
 
 
 body {
-    font-family: $main-font
-}
-.about-title {
-   display: flex; 
-   justify-content: center;
+    font-family: $main-font;
+    color: $accent;
+    font-size: 1.5rem;
 }
 
 .about-content {
-    display: flex; 
-    justify-content: center;
-    margin-top: 2rem;
-    padding: 3rem;
-}
 
-.about-title,
-.about-content {
-    background-color: $accent;
-    border-radius: 25px;
-    margin: 4rem;
+    line-height: 1.5;
+    padding: 10rem;
+
+
 }
