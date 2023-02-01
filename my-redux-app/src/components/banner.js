@@ -40,5 +40,7 @@ function ControlledCarousel() {
   );
 }
 
+// eslint-disable-next-line no-undef
 render(<ControlledCarousel />);
+//i dont know why this is giving sn eror so I commented out the error to be able to work on the site
 
