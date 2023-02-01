@@ -13,7 +13,7 @@ export default function SimpleSlider() {
     return (
       <Slider {...settings}>
         <div>
-          <h3>1</h3>
+          <h3><img src="/Users/lilycolby/Documents/fwd-program/wedDev-2/Toaster/my-redux-app/src/tmdb images/avatar.jpeg" alt="" />image</h3>
         </div>
         <div>
           <h3>2</h3>

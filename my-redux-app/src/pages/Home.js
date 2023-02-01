@@ -5,9 +5,6 @@ import "../scss/styles.scss";
 import MovieList from "../components/MovieList";
 import { Banner } from "../components/banner";
 
-<main>
-  
-</main>
 function Home() {
   const [moviesData, setMoviesData] = useState([]);
   const [movieFilter, setMovieFilter] = useState("now_playing");
