@@ -1,7 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { posterPath } from "../globals/globalVariables";
+import { apiPath, posterPath, apiKey } from "../globals/globalVariables";
+import FavBtn from "../components/FavBtn";
+import { addMovie, deleteMovie } from "../features/slices/favsSlice";
+import { useDispatch } from "react-redux";
+import "../scss/styles.scss";
 
 const Single = () => {
   const [movie, setMovie] = useState([]);
@@ -10,7 +14,7 @@ const Single = () => {
   let { id } = useParams();
 
   let fetchMovie = async () => {
-    let results = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=5d25ff38c62c8743cafcfe4221c1f5ae&language=en-US`);
+    let results = await fetch(`${apiPath}${id}?${apiKey}&language=en-US`);
     const jsonData = await results.json();
     console.log(jsonData);
     setMovie(jsonData);
@@ -20,6 +24,16 @@ const Single = () => {
   useEffect(() => {
     fetchMovie();
   }, [id]);
+
+  const dispatch = useDispatch();
+
+  function handleAddMov(mov) {
+    dispatch(addMovie(mov));
+  }
+
+  function handleDeleteMov(mov) {
+    dispatch(deleteMovie(mov));
+  }
 
   return (
     <div>
@@ -32,7 +46,9 @@ const Single = () => {
         <div className="rating">
           <p>{rating}%</p>
         </div>
-        <button>add to favourites</button>
+        <div className="single-pg-fav">
+          <FavBtn handleAddMov={handleAddMov} handleDeleteMov={handleDeleteMov} mov={movie} />
+        </div>
       </div>
 
       <div>
