@@ -1,36 +1,44 @@
-import Slider from "react-slick";
-import "../../node_modules/slick-carousel/slick/slick.css";
-import "../../node_modules/slick-carousel/slick/slick-theme.css"; 
+import React, { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 
-export default function SimpleSlider() {
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
-    return (
-      <Slider {...settings}>
-        <div>
-          <h3><img src="/Users/lilycolby/Documents/fwd-program/wedDev-2/Toaster/my-redux-app/src/tmdb images/avatar.jpeg" alt="" />image</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
-    );
-  }
+const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
+
+function ControlledCarousel() {
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex);
+  };
+
+  return (
+    <Carousel activeIndex={index} onSelect={handleSelect}>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={`${imageFolderPath}devotion.jpeg`}
+          alt="First slide"
+        />
+
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={`${imageFolderPath}megan.jpeg`}
+          alt="Second slide"
+        />
+
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={`${imageFolderPath}avatar.jpeg`}
+          alt="Third slide"
+        />
+      </Carousel.Item>
+    </Carousel>
+  );
+}
+
+render(<ControlledCarousel />);
 

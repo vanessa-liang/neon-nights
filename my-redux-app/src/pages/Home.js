@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import { apiPath, apiKey } from "../globals/globalVariables";
 import "../scss/styles.scss";
 import MovieList from "../components/MovieList";
-import { Banner } from "../components/banner";
+import Banner from "../components/banner";
 
 function Home() {
   const [moviesData, setMoviesData] = useState([]);
   const [movieFilter, setMovieFilter] = useState("now_playing");
+  const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
 
   let fetchData = async () => {
     // let movieFilter = Filters.state.value;
@@ -27,7 +28,18 @@ function Home() {
   }
 
   return (
+  //trying to add in carousel banner here - not working
+  //hardcoded an image below that
     <div className="container-fluid movie-app">
+      <div className="carousel">        
+      </div>
+      <div>
+      <img 
+        class="banner"
+        src={`${imageFolderPath}megan.jpeg`}
+        alt="Avatar Poster"
+      ></img>
+      </div>
       <select onChange={handleChange}>
         <option value="now_playing">Now Playing</option>
         <option value="popular">Popular</option>
@@ -40,6 +52,5 @@ function Home() {
     </div>
   );
 }
-
 
 export default Home;
