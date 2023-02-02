@@ -4,6 +4,7 @@ import { apiPath, apiKey } from "../globals/globalVariables";
 import "../scss/styles.scss";
 import MovieList from "../components/MovieList";
 import Banner from "../components/banner";
+import Carousel from 'react-bootstrap/Carousel';
 
 function Home() {
   const [moviesData, setMoviesData] = useState([]);

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import "./globals/globalVariables";
 import "./scss/styles.scss";
 import MovieList from "./components/MovieList";
+import Carousel from 'react-bootstrap/Carousel';
 
 function App() {
   const [moviesData, setMoviesData] = useState([]);
