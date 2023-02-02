@@ -27,14 +27,14 @@ function Home() {
 
   return (
     <div className="container-fluid movie-app">
-      <select onChange={handleChange}>
+      <select onChange={handleChange} className="dropdown">
         <option value="now_playing">Now Playing</option>
         <option value="popular">Popular</option>
         <option value="top_rated">Top Rated</option>
         <option value="upcoming">Upcoming</option>
       </select>
       <div className="row">
-        <MovieList movies={moviesData} />
+        <MovieList movies={moviesData}/>
       </div>
     </div>
   );
