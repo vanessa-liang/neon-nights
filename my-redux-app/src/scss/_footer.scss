@@ -13,6 +13,7 @@ Footer {
   width: 100%;
   // padding: 1rem;
   color: #d7afca;
+  z-index: 9999;
   //   display: flex;
   //   justify-content: space-between;
   //   align-items: flex-end;
@@ -25,7 +26,7 @@ Footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-right: 15px;
+  padding: 5px 15px 5px 15px;
 }
 
 @media (min-width: 900px) {
@@ -47,7 +48,7 @@ Footer {
   .desktopFooter {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
   }
 }
 
