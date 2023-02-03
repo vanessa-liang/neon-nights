@@ -3,10 +3,16 @@ import { useEffect, useState } from "react";
 import { apiPath, apiKey } from "../globals/globalVariables";
 import "../scss/styles.scss";
 import MovieList from "../components/MovieList";
+import SimpleSlider from "../components/carousel";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+
 
 function Home() {
   const [moviesData, setMoviesData] = useState([]);
   const [movieFilter, setMovieFilter] = useState("now_playing");
+  const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
 
   let fetchData = async () => {
     // let movieFilter = Filters.state.value;
@@ -27,6 +33,9 @@ function Home() {
 
   return (
     <div className="container-fluid movie-app">
+     <div className="background-poster">
+        {/* <img src="{`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`}" alt="" /> */}
+      </div>
       <select onChange={handleChange} className="dropdown">
         <option value="now_playing">Now Playing</option>
         <option value="popular">Popular</option>

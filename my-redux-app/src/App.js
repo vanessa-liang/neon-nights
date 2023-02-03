@@ -5,6 +5,7 @@ import "./globals/globalVariables";
 import "./scss/styles.scss";
 import MovieList from "./components/MovieList";
 
+
 function App() {
   const [moviesData, setMoviesData] = useState([]);
 
@@ -26,5 +27,7 @@ function App() {
     </div>
   );
 }
+
+
 
 export default App;

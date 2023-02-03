@@ -1,15 +1,28 @@
 @import 'vars';
 @import 'fonts';
 
-
-body {
-    font-family: $main-font;
-    color: $accent;
-    
-}
-
 .about-content {
-    line-height: 1.5;
-    padding: 10rem;
-    font-size: 1.5rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+    // display: flex;
+    // flex-direction: column;
+    p {
+        color: white;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
 }
+
+    .logo {
+    max-width: 500px;
+    display: block;
+    margin: 50px auto;
+    padding-bottom: 8rem;
+}
+
+

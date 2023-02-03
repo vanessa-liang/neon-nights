@@ -10,6 +10,7 @@ import "../scss/styles.scss";
 const Single = () => {
   const [movie, setMovie] = useState([]);
   const [rating, setRating] = useState(null);
+  const [backgroundPoster, setBackgroundPoster] = useState("");
 
   let { id } = useParams();
 
@@ -19,6 +20,7 @@ const Single = () => {
     console.log(jsonData);
     setMovie(jsonData);
     setRating(Math.round(jsonData.vote_average * 10));
+    jsonData.backdrop_path ? console.log("hooray") : console.log("boo");
   };
 
   useEffect(() => {
@@ -62,9 +64,7 @@ const Single = () => {
         </div>
       </div>
 
-      <div className="background-poster">
-        <img src={`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} className="mov-backdrop"></img>
-      </div>
+      <div className="background-poster">{movie.backdrop_path && <img src={`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} className="mov-backdrop"></img>}</div>
     </div>
   );
 };
