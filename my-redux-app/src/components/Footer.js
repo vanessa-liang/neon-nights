@@ -1,6 +1,9 @@
 import { getYear } from "../utilities/getDates";
 import { useMediaQuery } from "../globals/mediaSize";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import MobileNav from "./FooterMobile";
+// import {handleSubmit} from "../components/Nav"
+// import { Nav } from "../component/Nav";
 
 const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
 
@@ -18,18 +21,22 @@ const Footer = ({ copyright, authors }) => (
         alt="Neon Nights logo"
       ></img>
     </div>
-    <div className="navIcons">
-      <NavLink to="/">
-        <img src={`${imageFolderPath}home.svg`} alt="Neon Nights logo"></img>
-      </NavLink>
-      <NavLink to="/favourite">
-        <img src={`${imageFolderPath}fav.svg`} alt="Neon Nights logo"></img>
-      </NavLink>
-      <NavLink to="/about">
-        <img src={`${imageFolderPath}about.svg`} alt="Neon Nights logo"></img>
-      </NavLink>
-      <img src={`${imageFolderPath}search.svg`} alt="Neon Nights logo"></img>
-    </div>
+
+    <MobileNav />
+
+    {/* <div className="box" hidden> */}
+    {/* <form className="search" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              className="input"
+              placeholder="Search.."
+              name="search"
+            /> */}
+    {/* <button type="submit"> */}
+    {/* <i className="fa fa-search"></i> */}
+    {/* </button> */}
+    {/* </form>
+        </div> */}
   </footer>
 );
 

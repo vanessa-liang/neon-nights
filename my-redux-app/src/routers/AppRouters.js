@@ -23,9 +23,8 @@ function AppRouter() {
           <Route path="/result/:id" element={<Result />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </div>
-      <Footer />
     </BrowserRouter>
   );
 }

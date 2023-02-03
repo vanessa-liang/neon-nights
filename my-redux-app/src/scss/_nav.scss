@@ -8,7 +8,7 @@
   align-items: center;
 
   img {
-    height: 6rem;
+    height: 5rem;
     // position: absolute;
     // top: 1rem;
     // padding-left: 1rem;
@@ -120,6 +120,7 @@
     // flex-grow: 0.5;
     align-items: center;
     justify-content: flex-start;
+    margin-left: 10px;
   }
   .box {
     flex-grow: 1;
