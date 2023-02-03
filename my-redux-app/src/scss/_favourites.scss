@@ -6,6 +6,7 @@ main {
 
 .favourites-page {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 1.5rem;
 }
@@ -14,9 +15,8 @@ main {
     display: flex;
     gap: 1rem;
     align-items: center;
-    font-weight: 600;
-    font-size: 2rem;
-    color: $accent;
+    font-weight: 400;
+    font-size: 1.5rem;
     justify-content: space-between;
 
     p {
@@ -25,6 +25,5 @@ main {
 }
 
 header {
-    color: $accent;
     padding: 1rem;
 }
