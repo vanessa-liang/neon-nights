@@ -32,11 +32,9 @@ function Home() {
   }
 
   return (
-  //trying to add in carousel banner here - not working
-  //hardcoded an image below that
     <div className="container-fluid movie-app">
-      <div className="carousel">   
-       {/* <SimpleSlider movies={moviesData}  />   */}
+     <div className="background-poster">
+        {/* <img src="{`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`}" alt="" /> */}
       </div>
       <select onChange={handleChange} className="dropdown">
         <option value="now_playing">Now Playing</option>
