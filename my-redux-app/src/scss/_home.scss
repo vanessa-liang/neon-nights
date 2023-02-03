@@ -2,6 +2,14 @@
 
 .movie-fav {
     position: relative;
+    border: .1rem solid #d987be;
+    border-radius: 5px;
+    padding: .5rem;
+    height: 360px;
+
+    img {
+        border-radius: 5px;
+    }
 
     .fav {
         background-color: transparent;
@@ -37,7 +45,7 @@
         width: 200px;
         z-index: 1;
         position: absolute;
-        top: 0;
+        top: 0.5rem;
         background-color: rgba(0, 0, 0, 0.8);
         height: 303.5px;
         display: none;
@@ -100,6 +108,7 @@
         font-size: 1rem;
         max-width: 200px;
         color: white;
+        text-align: center;
     }
 
 }
@@ -116,4 +125,8 @@
 .banner {
     max-width: 100%;
     height: 100vh;
+}
+
+.container-fluid {
+    margin-bottom: 3rem;
 }
