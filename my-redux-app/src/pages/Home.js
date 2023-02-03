@@ -3,8 +3,11 @@ import { useEffect, useState } from "react";
 import { apiPath, apiKey } from "../globals/globalVariables";
 import "../scss/styles.scss";
 import MovieList from "../components/MovieList";
-import Banner from "../components/banner";
-import Carousel from 'react-bootstrap/Carousel';
+import SimpleSlider from "../components/carousel";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
+
 
 function Home() {
   const [moviesData, setMoviesData] = useState([]);
@@ -32,14 +35,8 @@ function Home() {
   //trying to add in carousel banner here - not working
   //hardcoded an image below that
     <div className="container-fluid movie-app">
-      <div className="carousel">        
-      </div>
-      <div>
-      <img 
-        class="banner"
-        src={`${imageFolderPath}megan.jpeg`}
-        alt="Avatar Poster"
-      ></img>
+      <div className="carousel">   
+       <SimpleSlider movies={moviesData}  />  
       </div>
       <select onChange={handleChange}>
         <option value="now_playing">Now Playing</option>
