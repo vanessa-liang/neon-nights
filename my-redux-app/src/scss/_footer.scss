@@ -3,7 +3,7 @@
 Footer {
   text-align: center;
   margin: 0px;
-  margin-top: 3rem;
+  // margin-top: 3rem;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -11,8 +11,9 @@ Footer {
   // border-top: 0.1rem solid #392b3b;
   background-color: #392b3b;
   width: 100%;
-  padding: 1rem;
+  // padding: 1rem;
   color: #d7afca;
+  z-index: 9999;
   //   display: flex;
   //   justify-content: space-between;
   //   align-items: flex-end;
@@ -25,7 +26,7 @@ Footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-right: 15px;
+  padding: 5px 15px 5px 15px;
 }
 
 @media (min-width: 900px) {
@@ -47,7 +48,7 @@ Footer {
   .desktopFooter {
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: center;
   }
 }
 
