@@ -4,10 +4,8 @@ import { apiPath, apiKey } from "../globals/globalVariables";
 import "../scss/styles.scss";
 import MovieList from "../components/MovieList";
 import SimpleSlider from "../components/carousel";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-
-
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 function Home() {
   const [moviesData, setMoviesData] = useState([]);
@@ -16,7 +14,9 @@ function Home() {
 
   let fetchData = async () => {
     // let movieFilter = Filters.state.value;
-    let results = await fetch(`${apiPath}${movieFilter}?${apiKey}&language=en-US&page=1`);
+    let results = await fetch(
+      `${apiPath}${movieFilter}?${apiKey}&language=en-US&page=1`
+    );
     const jsonData = await results.json();
     setMoviesData(jsonData.results.slice(0, 12));
   };
@@ -33,7 +33,7 @@ function Home() {
 
   return (
     <div className="container-fluid movie-app">
-     <div className="background-poster">
+      <div className="background-poster">
         {/* <img src="{`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`}" alt="" /> */}
       </div>
       <select onChange={handleChange} className="dropdown">
@@ -43,7 +43,7 @@ function Home() {
         <option value="upcoming">Upcoming</option>
       </select>
       <div className="row">
-        <MovieList movies={moviesData}/>
+        <MovieList movies={moviesData} />
       </div>
     </div>
   );

@@ -1,17 +1,15 @@
-
-import React, { Component , useState } from 'react';
-import Carousel from 'react-bootstrap-carousel';
-import Slider from "react-slick";
-import {Link} from 'react-router-dom';
-import "../../node_modules/slick-carousel/slick/slick.css";
-import "../../node_modules/slick-carousel/slick/slick-theme.css"; 
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-
+// import React, { Component , useState } from 'react';
+// import Carousel from 'react-bootstrap-carousel';
+// import Slider from "react-slick";
+// import {Link} from 'react-router-dom';
+// import "../../node_modules/slick-carousel/slick/slick.css";
+// import "../../node_modules/slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 // export default class SimpleSlider extends Component {
-  // function Component {
-  // render() {
+// function Component {
+// render() {
 //     const settings = {
 //       dots: true,
 //       infinite: true,
@@ -48,17 +46,12 @@ import "slick-carousel/slick/slick-theme.css";
 // }
 // const CarouselComponent = (props) => {
 
-  
-
-  
-
-  
 //     // const [index, setIndex] = useState(0);
-  
+
 //     // const handleSelect = (selectedIndex, e) => {
 //     //   setIndex(selectedIndex);
 //     // };
-  
+
 //     return (
 //       <>
 //       {/* <Carousel activeIndex={index} onSelect={handleSelect}> */}
@@ -73,10 +66,10 @@ import "slick-carousel/slick/slick-theme.css";
 //             src={`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`}
 //             alt="First slide"
 //           />
-  
+
 //         </Carousel.Item>
 //             </Link>
-          
+
 //         </div>
 //       ))}
 
@@ -86,8 +79,7 @@ import "slick-carousel/slick/slick-theme.css";
 //             src={`${imageFolderPath}megan.jpeg`}
 //             alt="Second slide"
 //           />
-  
-         
+
 //         </Carousel.Item>
 //         <Carousel.Item>
 //           <img
@@ -102,48 +94,3 @@ import "slick-carousel/slick/slick-theme.css";
 //   }
 
 //   export default CarouselComponent;
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
