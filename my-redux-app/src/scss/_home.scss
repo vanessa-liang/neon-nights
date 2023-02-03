@@ -76,6 +76,11 @@
         margin: 0 auto;
     }
 
+    .more-info:hover {
+        background-color: white;
+        color: $header-footer;
+    }
+
     a {
         text-decoration: none;
         color: black;
