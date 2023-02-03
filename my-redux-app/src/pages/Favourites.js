@@ -31,7 +31,7 @@ function Favourites() {
         </section>
       ) : (
         <section className="favourites-page">
-          <MovieList movies={favs} />
+          <MovieList movies={favs}/>
         </section>
       )
       }

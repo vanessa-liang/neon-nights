@@ -1,4 +1,6 @@
+
 import React from "react";
+import tmdb_logo  from "../images/themoviedb.svg";
 
 function About() {
   return (
@@ -9,7 +11,7 @@ function About() {
             This application was created for educational purposes only.</p>
       </div>
 
-      <img src="/src/images/themoviedb.svg" alt="TMDB logo"></img>
+      <img className="logo" src={tmdb_logo} alt="TMDB logo" />
       
     </div>
   );
