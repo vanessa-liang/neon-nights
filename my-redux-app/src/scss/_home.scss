@@ -34,12 +34,12 @@
 .hover {
 
         max-width: 200px;
+        width: 200px;
         z-index: 1;
         position: absolute;
         top: 0;
         background-color: rgba(0, 0, 0, 0.8);
         height: 303.5px;
-        cursor: pointer;
         display: none;
 
     .overview {
@@ -76,6 +76,11 @@
         margin: 0 auto;
     }
 
+    .more-info:hover {
+        background-color: white;
+        color: $header-footer;
+    }
+
     a {
         text-decoration: none;
         color: black;
@@ -105,4 +110,10 @@
             display: block;
         }
     }
+
+}
+
+.banner {
+    max-width: 100%;
+    height: 100vh;
 }
