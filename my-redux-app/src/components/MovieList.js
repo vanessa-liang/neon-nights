@@ -30,10 +30,6 @@ const MovieList = (props) => {
       {props.movies.map((movie) => (
         <div key={movie.id} className="image-container d-flex justify-content-start m-3">
           <div className="movie-fav">
-              {/* <FavBtn 
-              handleAddMov={handleAddMov}
-              handleDeleteMov={handleDeleteMov}
-              mov={movie}/> */}
               <Link key={movie.id} to={`/Single/${movie.id}`}>
                 <img src={posterPath + movie.poster_path} alt="movie"></img>
               </Link>
@@ -42,8 +38,7 @@ const MovieList = (props) => {
                 handleAddMov={handleAddMov}
                 handleDeleteMov={handleDeleteMov}
                 mov={movie}/>
-                {/* <p className="overview">{`${movie.overview.substring(0, 150)}...`}</p> */}
-                <p className="overview">{`${truncateText(movie.overview, 150)}...`}</p>
+                <p className="overview">{movie.overview && `${truncateText(movie.overview, 150)}...`}</p>
                 <p className="date">{movie.release_date}</p>
                 <p className="rating">{`${movie.vote_average * 10}%`}</p>
                 <a href={`/Single/${movie.id}`}>
