@@ -4,8 +4,7 @@ import { apiPath, apiKey } from "../globals/globalVariables";
 import "../scss/styles.scss";
 import MovieList from "../components/MovieList";
 import SimpleSlider from "../components/carousel";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [moviesData, setMoviesData] = useState([]);
@@ -33,9 +32,10 @@ function Home() {
 
   return (
     <div className="container-fluid movie-app">
-      <div className="background-poster">
-        {/* <img src="{`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`}" alt="" /> */}
-      </div>
+      <Link className="megan" to={`/Single/536554`}>
+        <img src={`${imageFolderPath}megan.jpeg`} alt="avatar movie"></img>
+      </Link>
+
       <select onChange={handleChange} className="dropdown">
         <option value="now_playing">Now Playing</option>
         <option value="popular">Popular</option>

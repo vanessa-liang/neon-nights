@@ -116,11 +116,13 @@
   }
 }
 
-.banner {
-  max-width: 100%;
-  height: 100vh;
-}
-
-.container-fluid {
-  margin-bottom: 3rem;
+.megan {
+  img {
+    width: 100%;
+    margin-left: -2rem;
+    margin-right: -2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 }
