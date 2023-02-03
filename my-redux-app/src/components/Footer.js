@@ -6,19 +6,19 @@ const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
 
 const Footer = ({ copyright, authors }) => (
   <footer>
-    <div class="desktopFooter">
-      <p class="copyRight" hidden>
+    <div className="desktopFooter">
+      <p className="copyRight" hidden>
         &copy; Copyright {copyright} {authors}
       </p>
 
       <img
-        class="footerLogo"
+        className="footerLogo"
         hidden
         src={`${imageFolderPath}neon-nights.png`}
         alt="Neon Nights logo"
       ></img>
     </div>
-    <div class="navIcons">
+    <div className="navIcons">
       <NavLink to="/">
         <img src={`${imageFolderPath}home.svg`} alt="Neon Nights logo"></img>
       </NavLink>

@@ -12,7 +12,9 @@ const Nav = () => {
     if (searchInput === "") {
       return;
     } else {
-      navigate(`/result/${searchInput}`, { state: { searchInput: `${searchInput}` } });
+      navigate(`/result/${searchInput}`, {
+        state: { searchInput: `${searchInput}` },
+      });
     }
   }
 
@@ -22,28 +24,39 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="main-nav" onClick={handleBlurOnClick}>
-        <nav className="main-nav" onClick={handleBlurOnClick}></nav>
-        <img src={`${imageFolderPath}neon-nights.png`} alt="Neon Nights logo"></img>
-        <ul className="nav-links">
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/favourite">Favourites</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About</NavLink>
-          </li>
-        </ul>
-      </nav>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Search.." name="search" />
-          <button type="submit">
+      <div className="nav">
+        <nav className="main-nav" onClick={handleBlurOnClick}>
+          <nav className="main-nav" onClick={handleBlurOnClick}></nav>
+          <img
+            className="neon-header"
+            src={`${imageFolderPath}neon-nights.png`}
+            alt="Neon Nights logo"
+          ></img>
+          <ul className="nav-links">
+            <li className="home" hidden>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li className="fav" hidden>
+              <NavLink to="/favourite">Favourites</NavLink>
+            </li>
+            <li className="about" hidden>
+              <NavLink to="/about">About</NavLink>
+            </li>
+          </ul>
+        </nav>
+        <div className="box" hidden>
+          <form className="search" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              className="input"
+              placeholder="Search.."
+              name="search"
+            />
+            {/* <button type="submit"> */}
             <i className="fa fa-search"></i>
-          </button>
-        </form>
+            {/* </button> */}
+          </form>
+        </div>
       </div>
     </>
   );
