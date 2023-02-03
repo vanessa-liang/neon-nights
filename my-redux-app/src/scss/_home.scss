@@ -1,132 +1,126 @@
-@use 'vars' as *;
+@use "vars" as *;
 
 .movie-fav {
-    position: relative;
-    border: .1rem solid #d987be;
+  position: relative;
+  border: 0.1rem solid #d987be;
+  border-radius: 5px;
+  padding: 0.5rem;
+  height: 360px;
+
+  img {
     border-radius: 5px;
-    padding: .5rem;
-    height: 360px;
+  }
 
-    img {
-        border-radius: 5px;
+  .fav {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    cursor: pointer;
+
+    .heart {
+      width: 2.5rem;
+      height: auto;
     }
-
-    .fav {
-        background-color: transparent;
-        border: none;
-        position: absolute;
-        right: 0;
-        z-index: 100;
-        cursor: pointer;
-
-        .heart {
-            width: 2.5rem;
-            height: auto;
-        }
-
-    }
+  }
 }
 
 .dropdown {
-    border: none;
-    margin: 1rem;
-    width: 15rem;
-    height: 2rem;
-    background-color: $header-footer;
-    color: white;
-    font-weight: 450;
-    font-size: 1.25rem;
-    text-align: center;
+  border: none;
+  margin: 1rem;
+  width: 15rem;
+  height: 2rem;
+  background-color: $header-footer;
+  color: white;
+  font-weight: 450;
+  font-size: 1.25rem;
+  text-align: center;
 }
 
 .hover {
+  max-width: 200px;
+  width: 200px;
+  z-index: 1;
+  position: absolute;
+  top: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 303.5px;
+  display: none;
 
-        max-width: 200px;
-        width: 200px;
-        z-index: 1;
-        position: absolute;
-        top: 0.5rem;
-        background-color: rgba(0, 0, 0, 0.8);
-        height: 303.5px;
-        display: none;
+  .overview {
+    margin-top: 3.5rem;
+    color: white;
+  }
 
-    .overview {
-        margin-top: 3.5rem;
-        color: white;
-    }
+  .date {
+    color: white;
+  }
 
-    .date {
-        color: white;
-    }
+  .rating {
+    background-color: $accent;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: black;
+    top: -0.8rem;
+    left: 0.8rem;
+    padding: 0.3rem;
+  }
 
-    .rating {
-        background-color: $accent;
-        border-radius: 50%;
-        height: 30px;
-        width: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        color: black;
-        top: -.8rem;
-        left: .8rem;
-        padding: .3rem;
-    }
+  button {
+    border: none;
+    background-color: $accent;
+    height: 1.5rem;
+    width: 50%;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+  }
 
-    button {
-        border: none;
-        background-color: $accent;
-        height: 1.5rem;
-        width: 50%;
-        border-radius: 5px;
-        display: block;
-        margin: 0 auto;
-    }
+  .more-info:hover {
+    background-color: white;
+    color: $header-footer;
+  }
 
-    .more-info:hover {
-        background-color: white;
-        color: $header-footer;
-    }
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .movie-info:hover {
-        background-color: white;
-        text-align: $header-footer;
-    }
-
+  .movie-info:hover {
+    background-color: white;
+    text-align: $header-footer;
+  }
 }
 
 .movie-info {
-
-    h2 {
-        font-weight: 600;
-        font-size: 1rem;
-        max-width: 200px;
-        color: white;
-        text-align: center;
-    }
-
+  h2 {
+    font-weight: 600;
+    font-size: 1rem;
+    max-width: 200px;
+    color: white;
+    text-align: center;
+  }
 }
 
 .movie-fav {
-    &:hover {
-        .hover {
-            display: block;
-        }
+  &:hover {
+    .hover {
+      display: block;
     }
-
+  }
 }
 
 .banner {
-    max-width: 100%;
-    height: 100vh;
+  max-width: 100%;
+  height: 100vh;
 }
 
 .container-fluid {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
