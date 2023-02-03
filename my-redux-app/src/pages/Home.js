@@ -36,7 +36,7 @@ function Home() {
   //hardcoded an image below that
     <div className="container-fluid movie-app">
       <div className="carousel">   
-       <SimpleSlider movies={moviesData}  />  
+       {/* <SimpleSlider movies={moviesData}  />   */}
       </div>
       <select onChange={handleChange} className="dropdown">
         <option value="now_playing">Now Playing</option>
