@@ -36,32 +36,34 @@ const Single = () => {
   }
 
   return (
-    <div>
-      <h1>{movie.title}</h1>
-      <div>
-        <img src={posterPath + movie.poster_path} alt={movie.title}></img>
-      </div>
-
-      <div>
-        <div className="rating">
-          <p>{rating}%</p>
+    <div className="single-wrapper">
+      <div className="single-content">
+        <h1>{movie.title}</h1>
+        <div className="mov-poster-div">
+          <img src={`https://www.themoviedb.org/t/p/original/${movie.poster_path}`} alt={movie.title} className="mov-poster"></img>
         </div>
-        <div className="single-pg-fav">
-          <FavBtn handleAddMov={handleAddMov} handleDeleteMov={handleDeleteMov} mov={movie} />
+
+        <div className="rating-and-fav">
+          <div className="rating">
+            <p>{rating}%</p>
+          </div>
+          <div className="single-pg-fav">
+            <FavBtn handleAddMov={handleAddMov} handleDeleteMov={handleDeleteMov} mov={movie} />
+          </div>
+        </div>
+
+        <div className="overview">
+          <h2>Overview</h2>
+          <p>{movie.overview}</p>
+        </div>
+
+        <div className="release-date">
+          <p>Released {movie.release_date}</p>
         </div>
       </div>
 
-      <div>
-        <h2>Overview</h2>
-        <p>{movie.overview}</p>
-      </div>
-
-      <div>
-        <p>Released {movie.release_date}</p>
-      </div>
-
-      <div>
-        <img src={posterPath + movie.backdrop_path} alt={movie.title}></img>
+      <div className="background-poster">
+        <img src={`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} className="mov-backdrop"></img>
       </div>
     </div>
   );
