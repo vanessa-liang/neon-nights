@@ -33,10 +33,8 @@ function Home() {
   return (
     <div className="container-fluid movie-app">
       <Link className="megan" to={`/Single/536554`}>
-        <img src={`${imageFolderPath}megan.jpeg`} 
-        width="600"
-        height="300"
-        alt="avatar movie"></img>
+        <img src={`${imageFolderPath}megan.jpeg`}
+        alt="megan movie"></img>
       </Link>
 
       <select onChange={handleChange} className="dropdown">
