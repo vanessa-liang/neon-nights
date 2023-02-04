@@ -36,9 +36,9 @@ const MovieList = (props) => {
             </Link>
             <div className="hover">
               <FavBtn handleAddMov={handleAddMov} handleDeleteMov={handleDeleteMov} mov={movie} />
-              <p className="overview">{`${movie.overview.substring(0, 150)}...`}</p>
+              <p className="overview">{movie.overview && `${truncateText(movie.overview, 150)}...`}</p>
               <p className="date">{movie.release_date}</p>
-              <p className="rating">{`${movie.vote_average * 10}%`}</p>
+              <p className="rating">{`${Math.round(movie.vote_average * 10)}%`}</p>
               <a href={`/Single/${movie.id}`}>
                 <button className="more-info">More Info</button>
               </a>

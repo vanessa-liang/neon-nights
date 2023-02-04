@@ -17,6 +17,8 @@ function Favourites() {
     dispatch(deleteMovie(mov));
   }
 
+  console.log(favs)
+
   return (
     <>
     <header>
