@@ -2,10 +2,19 @@
 
 main {
     padding: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-.nav-wrapper {
-    height: 89vh;
+.favourites-page {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    .image-container {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .fav-pg-nofav {
@@ -23,15 +32,15 @@ main {
         width: 225px;
         height: 225px;
     }
+
 }
 
-@media(min-width: 56.25em) {
+@media(min-width: 37.5em) {
 
     .favourites-page {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        gap: 1.5rem;
     }
     
     .fav-pg-nofav {

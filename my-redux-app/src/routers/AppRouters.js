@@ -13,7 +13,7 @@ import "../scss/styles.scss";
 function AppRouter() {
   return (
     <BrowserRouter>
-      <div className="nav-wrapper">
+      <div className="site-wrapper">
         <Nav />
         <Routes>
           <Route path="/" exact element={<Home />} />
@@ -23,9 +23,8 @@ function AppRouter() {
           <Route path="/result/:id" element={<Result />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </div>
-      <Footer />
     </BrowserRouter>
   );
 }
