@@ -26,9 +26,16 @@
   }
 }
 
+.row {
+  margin-top: 1rem;
+}
+
 .dropdown {
+  display: block;
+  margin: 0 auto;
   border: none;
-  margin: 1rem;
+
+  //   margin: 1rem;
   width: 15rem;
   height: 2rem;
   background-color: $header-footer;
@@ -121,8 +128,15 @@
     width: 100%;
     margin-left: -2rem;
     margin-right: -2rem;
+    margin-bottom: 1rem;
     align-items: center;
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .dropdown {
+    margin-left: 1rem;
   }
 }
