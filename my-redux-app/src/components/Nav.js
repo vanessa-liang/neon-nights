@@ -46,7 +46,7 @@ const Nav = () => {
             </li>
           </ul>
         </nav>
-        <div className="box" hidden>
+        <div className="box">
           <form className="search" onSubmit={handleSubmit}>
             <input
               type="text"

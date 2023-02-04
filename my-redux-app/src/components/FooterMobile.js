@@ -1,9 +1,11 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
 
 const MobileNav = () => {
   const navigate = useNavigate();
+  const [searchState, setSearchState] = useState(true);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -21,6 +23,7 @@ const MobileNav = () => {
   function handleBlurOnClick(e) {
     e.target.blur();
   }
+
   return (
     <>
       <div className="navIcons">
@@ -33,7 +36,7 @@ const MobileNav = () => {
         <NavLink to="/about">
           <img src={`${imageFolderPath}about.svg`} alt="Neon Nights logo"></img>
         </NavLink>
-        <img src={`${imageFolderPath}search.svg`} alt="Neon Nights logo"></img>
+
         <div className="boxTwo" hidden>
           <form className="search" onSubmit={handleSubmit}>
             <input
