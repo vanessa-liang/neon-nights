@@ -1,32 +1,30 @@
-@import 'vars';
-@import 'fonts';
+@import "vars";
+@import "fonts";
 
 .about-content {
-    padding-left: 10px;
-    padding-right: 10px;
-    max-width: 700px;
-    margin: 0 auto;
-    margin-top: 60px;
-    text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 60px;
+  text-align: center;
 
-    p {
-        color: white;
-        max-width: 800px;
-        margin: 0 auto;
-        line-height: 1.5;
-        padding-top: 10rem;
-    }
+  p {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+    padding-top: 10rem;
+  }
 }
 
-    .logo {
-    max-width: 500px;
-    display: block;
-    margin: 50px auto;
-    padding-bottom: 8rem;
+.logo {
+  max-width: 500px;
+  display: block;
+  margin: 50px auto;
+  padding-bottom: 5rem;
 }
 
 .about-wrapper {
-    margin-bottom: 10rem;
+  margin-bottom: 10rem;
 }
-
-

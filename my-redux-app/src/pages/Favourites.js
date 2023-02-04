@@ -9,7 +9,6 @@ import MovieList from "../components/MovieList";
 const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
 
 function Favourites() {
-
   const favs = useSelector((state) => state.favs.items);
   const dispatch = useDispatch();
 
@@ -17,27 +16,26 @@ function Favourites() {
     dispatch(deleteMovie(mov));
   }
 
-  console.log(favs)
+  console.log(favs);
 
   return (
     <>
-    <header>
-      <h1>Favourites</h1>
-    </header>
+      <header>
+        <h1>Favourites</h1>
+      </header>
 
-    <main>
-      {favs.length < 1 ? (
-        <section className="fav-pg-nofav">
-          <p>You have no favourite movies selected. Return to the home page and click some hearts to add them to your list!</p>
-          <img src={`${imageFolderPath}neonheartunclicked.png`} alt="Unclicked heart"></img>
-        </section>
-      ) : (
-        <section className="favourites-page">
-          <MovieList movies={favs}/>
-        </section>
-      )
-      }
-    </main>
+      <main className="favs-wrapper">
+        {favs.length < 1 ? (
+          <section className="fav-pg-nofav">
+            <p>You have no favourite movies selected. Return to the home page and click some hearts to add them to your list!</p>
+            <img src={`${imageFolderPath}neonheartunclicked.png`} alt="Unclicked heart"></img>
+          </section>
+        ) : (
+          <section className="favourites-page">
+            <MovieList movies={favs} />
+          </section>
+        )}
+      </main>
     </>
   );
 }
