@@ -8,8 +8,7 @@
     margin: 0 auto;
     margin-top: 60px;
     text-align: center;
-    // display: flex;
-    // flex-direction: column;
+
     p {
         color: white;
         max-width: 800px;
@@ -23,6 +22,10 @@
     display: block;
     margin: 50px auto;
     padding-bottom: 8rem;
+}
+
+.about-wrapper {
+    margin-bottom: 10rem;
 }
 
 

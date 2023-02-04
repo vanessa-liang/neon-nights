@@ -1,5 +1,9 @@
 @use "vars" as *;
 
+.site-wrapper {
+  max-width: 1920px;
+}
+
 .movie-fav {
   position: relative;
   border: 0.1rem solid #d987be;
@@ -128,10 +132,13 @@
     width: 100%;
     margin-left: -2rem;
     margin-right: -2rem;
-    margin-bottom: 1rem;
     align-items: center;
     display: flex;
     justify-content: center;
+    object-fit: cover;
+    object-position: center;
+    height: 60vh;
+    margin-bottom: 1rem;
   }
 }
 
