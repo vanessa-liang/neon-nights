@@ -3,20 +3,13 @@
 Footer {
   text-align: center;
   margin: 0px;
-  // margin-top: 3rem;
   position: sticky;
   bottom: 0;
   width: 100%;
-
-  // border-top: 0.1rem solid #392b3b;
   background-color: #392b3b;
   width: 100%;
-  // padding: 1rem;
   color: #d7afca;
   z-index: 9999;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: flex-end;
 
   img {
     height: 3.5rem;
@@ -25,13 +18,7 @@ Footer {
 }
 .boxTwo {
   height: 100px;
-  // z-index: 11111111;
 }
-// .searchIcon {
-//   .boxTwo {
-//     display: block;
-//   }
-// }
 .navIcons {
   display: flex;
   justify-content: space-between;
