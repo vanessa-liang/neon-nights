@@ -42,7 +42,7 @@ const Single = () => {
     <div className="single-wrapper">
       <div className="single-content">
         <h1>{movie.title}</h1>
-        <div className="mov-poster-div">{movie.poster_path ? <img src={posterPath + movie.poster_path} alt={movie.title} className="mov-poster"></img> : <img src={`${imageFolderPath}image-not-available.svg`} alt="Image not Available" className="mov-poster"></img>}</div>
+        <div className="mov-poster-div">{movie.poster_path ? <img src={`https://www.themoviedb.org/t/p/original/${movie.poster_path}`} alt={movie.title} className="mov-poster"></img> : <img src={`${imageFolderPath}image-not-available.svg`} alt="Image not Available" className="mov-poster"></img>}</div>
 
         <div className="rating-and-fav">
           <div className="rating">
