@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 399 600">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3f3f3f;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        font-size: 82px;
+      }
+
+      .cls-5 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        font-size: 100px;
+      }
+
+      .cls-4 {
+        letter-spacing: 0em;
+      }
+
+      .cls-8 {
+        fill: #d7afca;
+        font-family: Montserrat-Regular, Montserrat;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" width="399" height="600"/>
+  <text class="cls-8" transform="translate(54.05 228.01)"><tspan class="cls-7" x="0" y="0"> </tspan><tspan class="cls-2" x="26.2" y="0">Im</tspan><tspan class="cls-4" x="137.96" y="0">a</tspan><tspan class="cls-3" x="186.51" y="0">ge</tspan><tspan class="cls-3"><tspan x="70.46" y="98.4">Not</tspan></tspan><tspan class="cls-3"><tspan class="cls-5" x="-37.78" y="196.8">A</tspan><tspan class="cls-6" x="18.88" y="196.8">v</tspan><tspan x="62.01" y="196.8">ailable</tspan></tspan></text>
+</svg>

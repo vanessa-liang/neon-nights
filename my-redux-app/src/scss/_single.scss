@@ -13,6 +13,7 @@
 
     h1 {
       text-align: center;
+      margin-top: 0;
     }
 
     .mov-poster {
@@ -34,7 +35,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $accent;
+      background-color: $accent;
+      color: black;
     }
     .heart {
       width: 2.5rem;

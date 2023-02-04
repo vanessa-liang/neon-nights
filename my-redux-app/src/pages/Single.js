@@ -7,6 +7,8 @@ import { addMovie, deleteMovie } from "../features/slices/favsSlice";
 import { useDispatch } from "react-redux";
 import "../scss/styles.scss";
 
+const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
+
 const Single = () => {
   const [movie, setMovie] = useState([]);
   const [rating, setRating] = useState(null);
@@ -20,7 +22,6 @@ const Single = () => {
     console.log(jsonData);
     setMovie(jsonData);
     setRating(Math.round(jsonData.vote_average * 10));
-    jsonData.backdrop_path ? console.log("hooray") : console.log("boo");
   };
 
   useEffect(() => {
@@ -41,9 +42,7 @@ const Single = () => {
     <div className="single-wrapper">
       <div className="single-content">
         <h1>{movie.title}</h1>
-        <div className="mov-poster-div">
-          <img src={`https://www.themoviedb.org/t/p/original/${movie.poster_path}`} alt={movie.title} className="mov-poster"></img>
-        </div>
+        <div className="mov-poster-div">{movie.poster_path ? <img src={`https://www.themoviedb.org/t/p/original/${movie.poster_path}`} alt={movie.title} className="mov-poster"></img> : <img src={`${imageFolderPath}image-not-available.svg`} alt="Image not Available" className="mov-poster"></img>}</div>
 
         <div className="rating-and-fav">
           <div className="rating">
