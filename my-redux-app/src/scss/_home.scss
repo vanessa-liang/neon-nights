@@ -136,10 +136,18 @@
     justify-content: center;
     object-fit: cover;
     object-position: center;
-    height: 60vh;
+    height: 40vh;
   }
 }
 
 .container-fluid {
   margin-bottom: 3rem;
+}
+
+@media (min-width: 900px) {
+  .megan {
+    img {
+      height: 60vh;
+    }
+  }
 }
