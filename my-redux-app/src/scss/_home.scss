@@ -1,7 +1,7 @@
 @use "vars" as *;
 
 .site-wrapper {
-  max-width: 1920px;
+  max-width: 1600px;
 }
 
 .movie-fav {
@@ -130,15 +130,15 @@
 .megan {
   img {
     width: 100%;
-    margin-left: -2rem;
-    margin-right: -2rem;
+    height: 40rem;
+    // margin-left: -2rem;
+    // margin-right: -2rem;
     align-items: center;
     display: flex;
     justify-content: center;
     object-fit: cover;
     object-position: center;
     height: 60vh;
-    margin-bottom: 1rem;
   }
 }
 
