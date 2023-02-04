@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { apiPath, apiKey } from "../globals/globalVariables";
 import "../scss/styles.scss";
 import MovieList from "../components/MovieList";
-import SimpleSlider from "../components/carousel";
 import { Link } from "react-router-dom";
 
 function Home() {

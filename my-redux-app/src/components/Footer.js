@@ -1,9 +1,6 @@
 import { getYear } from "../utilities/getDates";
-import { useMediaQuery } from "../globals/mediaSize";
-import { NavLink, useNavigate } from "react-router-dom";
 import MobileNav from "./FooterMobile";
-// import {handleSubmit} from "../components/Nav"
-// import { Nav } from "../component/Nav";
+
 
 const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
 
@@ -23,20 +20,6 @@ const Footer = ({ copyright, authors }) => (
     </div>
 
     <MobileNav />
-
-    {/* <div className="box" hidden> */}
-    {/* <form className="search" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              className="input"
-              placeholder="Search.."
-              name="search"
-            /> */}
-    {/* <button type="submit"> */}
-    {/* <i className="fa fa-search"></i> */}
-    {/* </button> */}
-    {/* </form>
-        </div> */}
   </footer>
 );
 
