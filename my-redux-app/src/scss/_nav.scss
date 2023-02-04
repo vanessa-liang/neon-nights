@@ -4,12 +4,13 @@
   // padding-right: 30px;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
 
   img {
     height: 4rem;
-    padding: .5rem;
+    padding: 0.5rem;
     // position: absolute;
     // top: 1rem;
     // padding-left: 1rem;
@@ -47,7 +48,6 @@
 
 .box {
   position: relative;
-  width: 7%;
 }
 
 .input {
@@ -121,6 +121,7 @@
     // flex-grow: 0.5;
     align-items: center;
     justify-content: flex-start;
+    margin-left: 10px;
   }
   .box {
     flex-grow: 1;

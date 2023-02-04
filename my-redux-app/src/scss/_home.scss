@@ -35,9 +35,16 @@
   }
 }
 
+.row {
+  margin-top: 1rem;
+}
+
 .dropdown {
+  display: block;
+  margin: 0 auto;
   border: none;
-  margin: 1rem;
+
+  //   margin: 1rem;
   width: 15rem;
   height: 2rem;
   background-color: $header-footer;
@@ -149,5 +156,12 @@
     img {
       height: 60vh;
     }
+    height: 60vh;
+  }
+}
+
+@media (min-width: 900px) {
+  .dropdown {
+    margin-left: 1rem;
   }
 }

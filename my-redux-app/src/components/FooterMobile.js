@@ -1,9 +1,11 @@
 import { NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const imageFolderPath = process.env.PUBLIC_URL + "/assets/";
 
-const Nav = () => {
+const MobileNav = () => {
   const navigate = useNavigate();
+  const [searchState, setSearchState] = useState(true);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -24,29 +26,18 @@ const Nav = () => {
 
   return (
     <>
-      <div className="nav">
-        <nav className="main-nav" onClick={handleBlurOnClick}>
-          <nav className="main-nav" onClick={handleBlurOnClick}></nav>
-          <NavLink to="/">
-            <img
-              className="neon-header"
-              src={`${imageFolderPath}neon-nights.png`}
-              alt="Neon Nights logo"
-            ></img>
-          </NavLink>
-          <ul className="nav-links">
-            <li className="home" hidden>
-              <NavLink to="/">Home</NavLink>
-            </li>
-            <li className="fav" hidden>
-              <NavLink to="/favourite">Favourites</NavLink>
-            </li>
-            <li className="about" hidden>
-              <NavLink to="/about">About</NavLink>
-            </li>
-          </ul>
-        </nav>
-        <div className="box">
+      <div className="navIcons">
+        <NavLink to="/">
+          <img src={`${imageFolderPath}home.svg`} alt="Neon Nights logo"></img>
+        </NavLink>
+        <NavLink to="/favourite">
+          <img src={`${imageFolderPath}fav.svg`} alt="Neon Nights logo"></img>
+        </NavLink>
+        <NavLink to="/about">
+          <img src={`${imageFolderPath}about.svg`} alt="Neon Nights logo"></img>
+        </NavLink>
+
+        <div className="boxTwo" hidden>
           <form className="search" onSubmit={handleSubmit}>
             <input
               type="text"
@@ -64,4 +55,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default MobileNav;

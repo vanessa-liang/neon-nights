@@ -6,8 +6,6 @@ import MovieList from "../components/MovieList";
 import SimpleSlider from "../components/carousel";
 import { Link } from "react-router-dom";
 
-
-
 function Home() {
   const [moviesData, setMoviesData] = useState([]);
   const [movieFilter, setMovieFilter] = useState("now_playing");
@@ -15,7 +13,9 @@ function Home() {
 
   let fetchData = async () => {
     // let movieFilter = Filters.state.value;
-    let results = await fetch(`${apiPath}${movieFilter}?${apiKey}&language=en-US&page=1`);
+    let results = await fetch(
+      `${apiPath}${movieFilter}?${apiKey}&language=en-US&page=1`
+    );
     const jsonData = await results.json();
     setMoviesData(jsonData.results.slice(0, 12));
   };
@@ -38,7 +38,7 @@ function Home() {
         height="300"
         alt="avatar movie"></img>
       </Link>
-    
+
       <select onChange={handleChange} className="dropdown">
         <option value="now_playing">Now Playing</option>
         <option value="popular">Popular</option>
@@ -46,7 +46,7 @@ function Home() {
         <option value="upcoming">Upcoming</option>
       </select>
       <div className="row">
-        <MovieList movies={moviesData}/>
+        <MovieList movies={moviesData} />
       </div>
     </div>
   );
