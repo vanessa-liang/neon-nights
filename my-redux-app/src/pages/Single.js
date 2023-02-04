@@ -38,42 +38,34 @@ const Single = () => {
     dispatch(deleteMovie(mov));
   }
 
-  if (!movie.length === 0) {
-    return (
-      <div className="single-wrapper">
-        <div className="single-content">
-          <h1>{movie.title}</h1>
-          <div className="mov-poster-div">{movie.poster_path ? <img src={posterPath + movie.poster_path} alt={movie.title} className="mov-poster"></img> : <img src={`${imageFolderPath}image-not-available.svg`} alt="Image not Available" className="mov-poster"></img>}</div>
+  return (
+    <div className="single-wrapper">
+      <div className="single-content">
+        <h1>{movie.title}</h1>
+        <div className="mov-poster-div">{movie.poster_path ? <img src={posterPath + movie.poster_path} alt={movie.title} className="mov-poster"></img> : <img src={`${imageFolderPath}image-not-available.svg`} alt="Image not Available" className="mov-poster"></img>}</div>
 
-          <div className="rating-and-fav">
-            <div className="rating">
-              <p>{rating}%</p>
-            </div>
-            <div className="single-pg-fav">
-              <FavBtn handleAddMov={handleAddMov} handleDeleteMov={handleDeleteMov} mov={movie} />
-            </div>
+        <div className="rating-and-fav">
+          <div className="rating">
+            <p>{rating}%</p>
           </div>
-
-          <div className="overview">
-            <h2>Overview</h2>
-            <p>{movie.overview}</p>
-          </div>
-
-          <div className="release-date">
-            <p>Released {movie.release_date}</p>
+          <div className="single-pg-fav">
+            <FavBtn handleAddMov={handleAddMov} handleDeleteMov={handleDeleteMov} mov={movie} />
           </div>
         </div>
 
-        <div className="background-poster">{movie.backdrop_path && <img src={`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} className="mov-backdrop"></img>}</div>
+        <div className="overview">
+          <h2>Overview</h2>
+          <p>{movie.overview}</p>
+        </div>
+
+        <div className="release-date">
+          <p>Released {movie.release_date}</p>
+        </div>
       </div>
-    );
-  } else {
-    return (
-      <div className="single-wrapper">
-        <h3>No results found.</h3>
-      </div>
-    );
-  }
+
+      <div className="background-poster">{movie.backdrop_path && <img src={`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} className="mov-backdrop"></img>}</div>
+    </div>
+  );
 };
 
 export default Single;

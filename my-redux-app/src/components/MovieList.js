@@ -32,7 +32,7 @@ const MovieList = (props) => {
         <div key={movie.id} className="image-container d-flex justify-content-start m-3">
           <div className="movie-fav">
             <Link key={movie.id} to={`/Single/${movie.id}`}>
-              {movie.poster_path ? <img src={posterPath + movie.poster_path} alt={movie.title}></img> : <img src={`${imageFolderPath}image-not-available.svg`} alt="Image not Available"></img>}
+              {movie.poster_path ? <img src={posterPath + movie.poster_path} alt={movie.title}></img> : <img src={`${imageFolderPath}image-not-available.svg`} alt="Image not Available" className="default-image"></img>}
             </Link>
             <div className="hover">
               <FavBtn handleAddMov={handleAddMov} handleDeleteMov={handleDeleteMov} mov={movie} />
